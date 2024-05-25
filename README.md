@@ -22,7 +22,7 @@ The dataset used in this project consists of two folders:
 2. No need for user input variables; everything is handled internally.
 3. The script will train denoising autoencoders, VAEs, and CVAEs on the provided dataset.
 4. After training, the script will generate 3D TSNE embedding plots for logits/embeddings of the whole dataset after every 10 epochs.
-5. Save your checkpoints as required. Trained Encoder-Decoders will be tested on a separate test set, ensuring strict adherence to the provided data.
+5. Checkpoints are saved as required.
 
 ## Implementation
 1. **Denoising Autoencoder (AE)**:
