@@ -38,7 +38,3 @@ However, it can be added by extending the VAE architecture to include label cond
 
 ## Acknowledgments
 This project is inspired by the Altered MNIST dataset and builds upon existing autoencoder architectures.
-"""
-
-# Below this point, you would have the code implementation.
-# You can define functions/classes, load data, train models, and evaluate them all within this single script.
