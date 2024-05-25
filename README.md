@@ -1,5 +1,4 @@
-"""
-Altered MNIST Image Reconstruction using Autoencoders
+# Altered MNIST Image Reconstruction using Autoencoders
 
 This script implements different variants of autoencoders (AE) to reconstruct altered MNIST images.
 The altered MNIST dataset consists of images where each clean image has been augmented to create several variations.
