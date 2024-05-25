@@ -18,7 +18,7 @@ The dataset used in this project consists of two folders:
 - Scikit-image
 
 ## Usage
-1. Run this script.
+1. Run this script for the file 2021102A3.
 2. No need for user input variables; everything is handled internally.
 3. The script will train denoising autoencoders, VAEs, and CVAEs on the provided dataset.
 4. After training, the script will generate 3D TSNE embedding plots for logits/embeddings of the whole dataset after every 10 epochs.
