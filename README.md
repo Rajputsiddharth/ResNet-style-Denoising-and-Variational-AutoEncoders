@@ -1,8 +1,8 @@
 # Altered MNIST Image Reconstruction using Autoencoders
-This script implements different variants of autoencoders (AE) to reconstruct altered MNIST images.
+This Python script implements and trains three types of autoencoders: regular autoencoders, variational autoencoders (VAEs), and conditional variational autoencoders 
 The altered MNIST dataset consists of images where each clean image has been augmented to create several variations.
 The autoencoders are trained to reconstruct the clean version of the augmented images.
-Two variants of autoencoders, namely Vanilla Autoencoder (VAE) and Conditional Variational Autoencoder (CVAE), are implemented and compared in terms of reconstruction quality.
+Both the encoder and decoder architectures follow the ResNet style, with residual connections after 2 convolution / 2 convolution-batchnorm layers.
 
 ## Dataset
 The dataset used in this project consists of two folders:
@@ -19,17 +19,24 @@ The dataset used in this project consists of two folders:
 
 ## Usage
 1. Run this script.
-2. Modify the parameters such as training epochs, batch size, learning rate, etc., as per your requirement.
-3. The script will train both Vanilla Autoencoder (AE) and Variational Autoencoder (VAE).
-4. Once trained, the script will evaluate the models based on specified evaluation metrics.
-5. You can adjust the evaluation parameters and choose the type of evaluation metric (`SSIM` or `PSNR`).
+2. No need for user input variables; everything is handled internally.
+3. The script will train denoising autoencoders, VAEs, and CVAEs on the provided dataset.
+4. After training, the script will generate 3D TSNE embedding plots for logits/embeddings of the whole dataset after every 10 epochs.
+5. Save your checkpoints as required. Trained Encoder-Decoders will be tested on a separate test set, ensuring strict adherence to the provided data.
 
-## Conditional Variational Autoencoder (CVAE)
-The script already includes the implementation of Conditional Variational Autoencoder (CVAE).
-CVAE extends the VAE architecture to include label conditioning in both the encoder and decoder.
+## Implementation
+1. **Denoising Autoencoder (AE)**:
+   - Encoder and decoder follow ResNet style with residual connections.
+   - Design choices are flexible except for the specified residual connections.
 
-## Results
-- The trained models achieve high reconstruction quality, as measured by Structural Similarity Index (SSIM) and Peak Signal-to-Noise Ratio (PSNR).
+2. **Denoising Variational Autoencoder (VAE)**:
+   - Similar architecture to the AE but with VAE-specific modifications.
+   - Encoder outputs logits/embeddings, which are then sampled for the VAE loss calculation.
+   - Additional TSNE plots are generated for sampled logits/embeddings.
 
+3. **Conditional Variational Autoencoder (CVAE)** (Bonus Question):
+   - Implements a CVAE to generate one of the classes of the MNIST dataset at inference time, given the class label.
+   - Architecture includes label conditioning in both the encoder and decoder.
+   - 
 ## Future Work
 - Explore different augmentation techniques for improved model performance.
