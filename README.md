@@ -1,5 +1,4 @@
 # Altered MNIST Image Reconstruction using Autoencoders
-
 This script implements different variants of autoencoders (AE) to reconstruct altered MNIST images.
 The altered MNIST dataset consists of images where each clean image has been augmented to create several variations.
 The autoencoders are trained to reconstruct the clean version of the augmented images.
@@ -26,15 +25,11 @@ The dataset used in this project consists of two folders:
 5. You can adjust the evaluation parameters and choose the type of evaluation metric (`SSIM` or `PSNR`).
 
 ## Conditional Variational Autoencoder (CVAE)
-The implementation of Conditional Variational Autoencoder (CVAE) is not available in this script.
-However, it can be added by extending the VAE architecture to include label conditioning in both the encoder and decoder.
+The script already includes the implementation of Conditional Variational Autoencoder (CVAE).
+CVAE extends the VAE architecture to include label conditioning in both the encoder and decoder.
 
 ## Results
 - The trained models achieve high reconstruction quality, as measured by Structural Similarity Index (SSIM) and Peak Signal-to-Noise Ratio (PSNR).
 
 ## Future Work
-- Implement the Conditional Variational Autoencoder (CVAE) for conditional image generation.
 - Explore different augmentation techniques for improved model performance.
-
-## Acknowledgments
-This project is inspired by the Altered MNIST dataset and builds upon existing autoencoder architectures.
