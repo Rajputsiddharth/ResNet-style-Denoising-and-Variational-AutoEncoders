@@ -37,6 +37,6 @@ The dataset used in this project consists of two folders:
 3. **Conditional Variational Autoencoder (CVAE)** (Bonus Question):
    - Implements a CVAE to generate one of the classes of the MNIST dataset at inference time, given the class label.
    - Architecture includes label conditioning in both the encoder and decoder.
-   - 
+     
 ## Future Work
 - Explore different augmentation techniques for improved model performance.
